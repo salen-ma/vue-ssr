@@ -30,17 +30,18 @@ if (isProd) {
   })
 }
 
-const render = (req, res) => {
-  renderer.renderToString({
-    title: 'vue ssr'
-  }, (err, html) => {
-    // 处理异常……
-    if (err) {
-      return res.status(500).end('Internal Server Error.')
-    }
+const render = async (req, res) => {
+  try {
+    const html = await renderer.renderToString({
+      title: 'vue ssr',
+      url: req.url
+    })
+
     res.setHeader('Content-Type', 'text/html; charset=utf-8')
     res.end(html)
-  })
+  } catch (err) {
+    res.status(500).end('Internal Server Error')
+  }
 }
 
 // 在服务器处理函数中……

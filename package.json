@@ -16,6 +16,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "vue": "^2.6.12",
+    "vue-router": "^3.4.3",
     "vue-server-renderer": "^2.6.12"
   },
   "devDependencies": {

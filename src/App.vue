@@ -8,6 +8,11 @@
     <div>
       <button @click="onClick">点击测试</button>
     </div>
+    <nav>
+      <router-link to="/">home</router-link> |
+      <router-link to="/about">about</router-link>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
 
