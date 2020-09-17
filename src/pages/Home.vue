@@ -6,6 +6,9 @@
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Home',
+  metaInfo: {
+    title: '首页'
+  }
 }
 </script>

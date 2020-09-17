@@ -18,6 +18,11 @@ export function createRouter () {
         component: () => import(/* webpackChunkName: "about" */ './pages/About.vue')
       },
       {
+        path: '/posts',
+        name: 'Posts',
+        component: () => import(/* webpackChunkName: "about" */ './pages/Posts.vue')
+      },
+      {
         path: '*',
         name: 'Error404',
         component: () => import(/* webpackChunkName: "about" */ './pages/404.vue')

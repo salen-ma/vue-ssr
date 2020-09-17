@@ -33,7 +33,6 @@ if (isProd) {
 const render = async (req, res) => {
   try {
     const html = await renderer.renderToString({
-      title: 'vue ssr',
       url: req.url
     })
 
